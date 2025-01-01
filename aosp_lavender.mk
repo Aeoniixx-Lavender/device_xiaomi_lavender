@@ -9,12 +9,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# The Pixel Project flags
+USE_PIXEL_CHARGER := true
+CUSTOM_BUILD_TYPE := Unofficial
+TARGET_INCLUDE_CAMERA_GO := true
+TARGET_SUPPORTS_QUICK_TAP  := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_CALL_RECORDING_SUPPORTED := true
+TARGET_SUPPORTS_PREBUILT_UPDATABLE_APEX := false
 
 # Inherit from lavender device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_NAME := lineage_lavender
+PRODUCT_NAME := aosp_lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := lavender
 PRODUCT_MANUFACTURER := Xiaomi
