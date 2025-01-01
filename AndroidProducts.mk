@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_lavender.mk
+    $(LOCAL_DIR)/pixelstar_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_lavender-user \
-    lineage_lavender-userdebug \
-    lineage_lavender-eng
+    pixelstar_lavender-user \
+    pixelstar_lavender-userdebug \
+    pixelstar_lavender-eng
